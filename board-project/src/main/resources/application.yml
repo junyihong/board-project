@@ -41,7 +41,7 @@ spring:
     rest:
       base-path: /api
       detection-strategy: annotated
-
+# 어노테이션으로 명시한 REST API만 노출시킨다.
 ---
 
 #spring:
