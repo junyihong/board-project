@@ -1,6 +1,6 @@
 package com.junyihong.boardproject.domain;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -36,7 +36,7 @@ public class ArticleComment extends AuditingFields{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof ArticleComment that)) return false;
-        return id != null && id.equals(that.id);
+        return this.getId() != null && this.getId().equals(that.id);
 
     }
 
