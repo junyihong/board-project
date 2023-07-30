@@ -1,12 +1,12 @@
 package com.junyihong.boardproject.domain;
 
-import jakarta.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import javax.persistence.*;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -15,11 +15,10 @@ import java.util.Set;
 @ToString
 @Table(indexes = {
         @Index(columnList = "title"),
-        @Index(columnList = "hashtag"),
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
 })
-@EntityListeners(AuditingEntityListener.class)
+
 @Entity
 public class Article extends AuditingFields {
     @Id
@@ -32,7 +31,7 @@ public class Article extends AuditingFields {
 
     @Setter private String hashtag;     // 해시태그
 
-    @OrderBy("id")
+    @OrderBy("createdAt DESC")
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
     @ToString.Exclude
     private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
