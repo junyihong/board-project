@@ -18,12 +18,6 @@ spring:
     username: junyihong
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:h2:mem:testdb
-#    username: sa
-#    driver-class-name: org.h2.Driver
-#  h2:
-#    console:
-#      enabled: true
   jpa:
     defer-datasource-initialization: true
     hibernate:
@@ -41,7 +35,16 @@ spring:
     rest:
       base-path: /api
       detection-strategy: annotated
+  thymeleaf3.decoupled-logic: true
+
+
 # 어노테이션으로 명시한 REST API만 노출시킨다.
+#    url: jdbc:h2:mem:testdb
+#    username: sa
+#    driver-class-name: org.h2.Driver
+#  h2:
+#    console:
+#      enabled: true
 ---
 
 #spring:
