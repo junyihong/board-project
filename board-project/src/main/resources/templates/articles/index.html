@@ -5,10 +5,7 @@
     <title>게시판 페이지</title>
 </head>
 <body>
-<header>
-    header삽입부
-    <hr/>
-</header>
+<header th:replace="header :: header"></header>
 <main>
     <form>
         <label for="search-type" hidden>유형</label>
@@ -68,9 +65,6 @@
         </table>
     </nav>
 </main>
-<footer>
-    <hr/>
-    footer 삽입부
-</footer>
+<footer th:replace="footer :: footer"></footer>
 </body>
 </html>
