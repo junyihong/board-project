@@ -14,7 +14,10 @@
 
 <body>
 
-<header id="header"></header>
+<header id="header">
+    헤더 부분
+    <hr/>
+</header>
 
 <main class="container">
 
@@ -59,33 +62,37 @@
         </div>
     </div>
 
-    <table class="table">
+    <table class="table" id="article-table">
         <thead>
         <tr>
-            <th class="col-6">제목</th>
-            <th class="col-2">해시태그</th>
-            <th class="col">작성자</th>
-            <th class="col">작성일</th>
+            <th class="title col-6">제목</th>
+            <th class="hashtag col-2">해시태그</th>
+            <th class="user-id col">작성자</th>
+            <th class="created-at col">작성일</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>첫글</td>
-            <td>#java</td>
-            <td>junyihong</td>
-            <td>2022-01-01</td>
+            <td class="title"><a>첫글</a></td>
+            <td class="hashtag">#java</td>
+            <td class="user-id">junyihong</td>
+            <td class="created-at"><time>2023-08-01</time></td>
         </tr>
+        <!--
+        두번째, 세번째에 클래스를 넣으니까 thymeleaf에서 인식을 제대로 못하는 듯 하다.
+        index.th.xml에서 클래스를 대상으로 해서 each문 돌리는데 대상이 두개이상이면 안되는 듯.
+        -->
         <tr>
-            <td>두번째글</td>
+            <td>두번째 글</td>
             <td>#spring</td>
             <td>junyihong</td>
-            <td>2022-01-02</td>
+            <td><time>2023-08-02</time></td>
         </tr>
         <tr>
-            <td>세번째글</td>
+            <td>세번째 글</td>
             <td>#java</td>
             <td>junyihong</td>
-            <td>2022-01-03</td>
+            <td><time>2023-08-03</time></td>
         </tr>
         </tbody>
     </table>
@@ -101,7 +108,10 @@
     </nav>
 </main>
 
-<footer id="footer"></footer>
+<footer id="footer">
+    <hr/>
+    푸터 부분
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
