@@ -1,5 +1,6 @@
 package com.junyihong.boardproject.service;
 
+import com.junyihong.boardproject.domain.ArticleComment;
 import com.junyihong.boardproject.dto.ArticleCommentDto;
 import com.junyihong.boardproject.repository.ArticleCommentRepository;
 import com.junyihong.boardproject.repository.ArticleRepository;
@@ -8,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @Slf4j
