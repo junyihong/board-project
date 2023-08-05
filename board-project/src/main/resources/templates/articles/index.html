@@ -25,7 +25,7 @@
     <div class="row">
         <div class="card card-margin search-form">
             <div class="card-body p-0">
-                <form action="/articles" method="get" >
+                <form id="search-form">
                     <div class="row">
                         <div class="col-12">
                             <div class="row no-gutters">
@@ -62,50 +62,64 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <table class="table" id="article-table">
+            <thead>
+            <tr>
+                <th class="title col-6"><a>제목</a></th>
+                <th class="hashtag col-2"><a>해시태그</a></th>
+                <th class="user-id"><a>작성자</a></th>
+                <th class="created-at"><a>작성일</a></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="title"><a>첫글</a></td>
+                <td class="hashtag">#java</td>
+                <td class="user-id">junyihong</td>
+                <td class="created-at">
+                    <time>2023-08-01</time>
+                </td>
+            </tr>
+            <!--
+            두번째, 세번째에 클래스를 넣으니까 thymeleaf에서 인식을 제대로 못하는 듯 하다.
+            index.th.xml에서 클래스를 대상으로 해서 each문 돌리는데 대상이 두개이상이면 안되는 듯.
+            -->
+            <tr>
+                <td>두번째 글</td>
+                <td>#spring</td>
+                <td>junyihong</td>
+                <td>
+                    <time>2023-08-02</time>
+                </td>
+            </tr>
+            <tr>
+                <td>세번째 글</td>
+                <td>#java</td>
+                <td>junyihong</td>
+                <td>
+                    <time>2023-08-03</time>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <table class="table" id="article-table">
-        <thead>
-        <tr>
-            <th class="title col-6"><a>제목</a></th>
-            <th class="hashtag col-2"><a>해시태그</a></th>
-            <th class="user-id col"><a>작성자</a></th>
-            <th class="created-at col"><a>작성일</a></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td class="title"><a>첫글</a></td>
-            <td class="hashtag">#java</td>
-            <td class="user-id">junyihong</td>
-            <td class="created-at"><time>2023-08-01</time></td>
-        </tr>
-        <!--
-        두번째, 세번째에 클래스를 넣으니까 thymeleaf에서 인식을 제대로 못하는 듯 하다.
-        index.th.xml에서 클래스를 대상으로 해서 each문 돌리는데 대상이 두개이상이면 안되는 듯.
-        -->
-        <tr>
-            <td>두번째 글</td>
-            <td>#spring</td>
-            <td>junyihong</td>
-            <td><time>2023-08-02</time></td>
-        </tr>
-        <tr>
-            <td>세번째 글</td>
-            <td>#java</td>
-            <td>junyihong</td>
-            <td><time>2023-08-03</time></td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="row">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a class="btn btn-primary me-md-2" role="button" id="write-article">글쓰기</a>
+        </div>
+    </div>
 
-    <nav id="pagination" aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <!-- 하나를 두고 forEach로 치환해서 반복문을 돌리기 위해 2번 3번 삭제함. -->
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-    </nav>
+    <div class="row">
+        <nav id="pagination" aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+    </div>
 </main>
 
 <footer id="footer">
