@@ -30,7 +30,8 @@ Spring Boot
 * QueryDSL 5.0.0
 * Bootstrap 5.2.0-Beta1
 * Heroku
-https://raw.githubusercontent.com/junyihong/board-project/main/document/use-case.svg
+
+## Reference
 
 * 유즈케이스 다이어그램: (https://raw.githubusercontent.com/junyihong/board-project/main/document/use-case.svg)
 * ER 다이어그램 : (https://raw.githubusercontent.com/junyihong/board-project/main/document/board-project-erd.svg)
