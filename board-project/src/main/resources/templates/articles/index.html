@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="JUNYIHONG">
+    <meta name="author" content="Uno Kim">
     <title>게시판 페이지</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="/css/search-bar.css" rel="stylesheet">
     <link href="/css/articles/table-header.css" rel="stylesheet">
 </head>
 
 <body>
-
 <header id="header">
-    헤더 부분
-    <hr/>
+    헤더 삽입부
+    <hr>
 </header>
 
 <main class="container">
@@ -41,15 +39,11 @@
                                 </div>
                                 <div class="col-lg-8 col-md-6 col-sm-12 p-0">
                                     <label for="search-value" hidden>검색어</label>
-                                    <input type="text" placeholder="검색어..." class="form-control" id="search-value"
-                                           name="searchValue">
+                                    <input type="text" placeholder="검색어..." class="form-control" id="search-value" name="searchValue">
                                 </div>
                                 <div class="col-lg-1 col-md-3 col-sm-12 p-0">
                                     <button type="submit" class="btn btn-base">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                             stroke-linecap="round" stroke-linejoin="round"
-                                             class="feather feather-search">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
                                             <circle cx="11" cy="11" r="8"></circle>
                                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                                         </svg>
@@ -62,6 +56,7 @@
             </div>
         </div>
     </div>
+
     <div class="row">
         <table class="table" id="article-table">
             <thead>
@@ -76,30 +71,20 @@
             <tr>
                 <td class="title"><a>첫글</a></td>
                 <td class="hashtag">#java</td>
-                <td class="user-id">junyihong</td>
-                <td class="created-at">
-                    <time>2023-08-01</time>
-                </td>
+                <td class="user-id">Uno</td>
+                <td class="created-at"><time>2022-01-01</time></td>
             </tr>
-            <!--
-            두번째, 세번째에 클래스를 넣으니까 thymeleaf에서 인식을 제대로 못하는 듯 하다.
-            index.th.xml에서 클래스를 대상으로 해서 each문 돌리는데 대상이 두개이상이면 안되는 듯.
-            -->
             <tr>
-                <td>두번째 글</td>
+                <td>두번째글</td>
                 <td>#spring</td>
-                <td>junyihong</td>
-                <td>
-                    <time>2023-08-02</time>
-                </td>
+                <td>Uno</td>
+                <td><time>2022-01-02</time></td>
             </tr>
             <tr>
-                <td>세번째 글</td>
+                <td>세번째글</td>
                 <td>#java</td>
-                <td>junyihong</td>
-                <td>
-                    <time>2023-08-03</time>
-                </td>
+                <td>Uno</td>
+                <td><time>2022-01-03</time></td>
             </tr>
             </tbody>
         </table>
@@ -123,12 +108,10 @@
 </main>
 
 <footer id="footer">
-    <hr/>
-    푸터 부분
+    <hr>
+    푸터 삽입부
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
