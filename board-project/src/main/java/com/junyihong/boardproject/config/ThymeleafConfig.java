@@ -22,6 +22,7 @@ public class ThymeleafConfig {
         return defaultTemplateResolver;
     }
 
+
     @RequiredArgsConstructor
     @Getter
     @ConstructorBinding
