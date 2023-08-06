@@ -21,9 +21,9 @@ import java.util.List;
 @Service
 public class ArticleCommentService {
 
-    private final UserAccountRepository userAccountRepository;
     private final ArticleRepository articleRepository;
     private final ArticleCommentRepository articleCommentRepository;
+    private final UserAccountRepository userAccountRepository;
 
     @Transactional(readOnly = true)
     public List<ArticleCommentDto> searchArticleComments(Long articleId) {
@@ -35,13 +35,11 @@ public class ArticleCommentService {
 
     public void saveArticleComment(ArticleCommentDto dto) {
         try {
-            // 게시글의 정보 가져오기
             Article article = articleRepository.getReferenceById(dto.articleId());
-            // 댓글의 댓글작성자 정보 가져오기
             UserAccount userAccount = userAccountRepository.getReferenceById(dto.userAccountDto().userId());
             articleCommentRepository.save(dto.toEntity(article, userAccount));
         } catch (EntityNotFoundException e) {
-            log.warn("댓글 저장 실패. 댓글 작성에 필요한 정보를 찾을 수 없습니다. - dto: {}", e.getLocalizedMessage());
+            log.warn("댓글 저장 실패. 댓글 작성에 필요한 정보를 찾을 수 없습니다 - {}", e.getLocalizedMessage());
         }
     }
 

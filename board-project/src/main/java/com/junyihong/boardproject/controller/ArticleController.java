@@ -2,7 +2,6 @@ package com.junyihong.boardproject.controller;
 
 import com.junyihong.boardproject.domain.constant.FormStatus;
 import com.junyihong.boardproject.domain.constant.SearchType;
-import com.junyihong.boardproject.dto.UserAccountDto;
 import com.junyihong.boardproject.dto.request.ArticleRequest;
 import com.junyihong.boardproject.dto.response.ArticleResponse;
 import com.junyihong.boardproject.dto.response.ArticleWithCommentsResponse;
@@ -42,12 +41,14 @@ public class ArticleController {
         map.addAttribute("articles", articles);
         map.addAttribute("paginationBarNumbers", barNumbers);
         map.addAttribute("searchTypes", SearchType.values());
+
         return "articles/index";
     }
 
     @GetMapping("/{articleId}")
     public String article(@PathVariable Long articleId, ModelMap map) {
         ArticleWithCommentsResponse article = ArticleWithCommentsResponse.from(articleService.getArticleWithComments(articleId));
+
         map.addAttribute("article", article);
         map.addAttribute("articleComments", article.articleCommentsResponse());
         map.addAttribute("totalCount", articleService.getArticleCount());
@@ -69,7 +70,7 @@ public class ArticleController {
         map.addAttribute("hashtags", hashtags);
         map.addAttribute("paginationBarNumbers", barNumbers);
         map.addAttribute("searchType", SearchType.HASHTAG);
-//        map.addAttribute("searchTypes", SearchType.values());
+
         return "articles/search-hashtag";
     }
 
@@ -120,4 +121,5 @@ public class ArticleController {
 
         return "redirect:/articles";
     }
+
 }

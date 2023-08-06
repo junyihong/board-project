@@ -35,10 +35,8 @@ public class ArticleService {
         return switch (searchType) {
             case TITLE -> articleRepository.findByTitleContaining(searchKeyword, pageable).map(ArticleDto::from);
             case CONTENT -> articleRepository.findByContentContaining(searchKeyword, pageable).map(ArticleDto::from);
-            case ID ->
-                    articleRepository.findByUserAccount_UserIdContaining(searchKeyword, pageable).map(ArticleDto::from);
-            case NICKNAME ->
-                    articleRepository.findByUserAccount_NicknameContaining(searchKeyword, pageable).map(ArticleDto::from);
+            case ID -> articleRepository.findByUserAccount_UserIdContaining(searchKeyword, pageable).map(ArticleDto::from);
+            case NICKNAME -> articleRepository.findByUserAccount_NicknameContaining(searchKeyword, pageable).map(ArticleDto::from);
             case HASHTAG -> articleRepository.findByHashtag("#" + searchKeyword, pageable).map(ArticleDto::from);
         };
     }
@@ -74,7 +72,6 @@ public class ArticleService {
             }
         } catch (EntityNotFoundException e) {
             log.warn("게시글 업데이트 실패. 게시글을 수정하는데 필요한 정보를 찾을 수 없습니다 - {}", e.getLocalizedMessage());
-            // @Slf4j
         }
     }
 
@@ -91,10 +88,12 @@ public class ArticleService {
         if (hashtag == null || hashtag.isBlank()) {
             return Page.empty(pageable);
         }
+
         return articleRepository.findByHashtag(hashtag, pageable).map(ArticleDto::from);
     }
 
     public List<String> getHashtags() {
         return articleRepository.findAllDistinctHashtags();
     }
+
 }

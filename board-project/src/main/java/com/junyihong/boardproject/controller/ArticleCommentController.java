@@ -18,21 +18,19 @@ public class ArticleCommentController {
 
     private final ArticleCommentService articleCommentService;
 
-    @PostMapping("/new")
+    @PostMapping ("/new")
     public String postNewArticleComment(
             @AuthenticationPrincipal BoardPrincipal boardPrincipal,
             ArticleCommentRequest articleCommentRequest
     ) {
-        // TODO : 인증 정보를 넣어줘야 한다.
+        articleCommentService.saveArticleComment(articleCommentRequest.toDto(boardPrincipal.toDto()));
 
-        articleCommentService.saveArticleComment(articleCommentRequest.toDto(boardPrincipal.toDto()
-        ));
 
         return "redirect:/articles/" + articleCommentRequest.articleId();
     }
 
-    @PostMapping("/{commentId}/delete")
-    public String deleteArticleComment (
+    @PostMapping ("/{commentId}/delete")
+    public String deleteArticleComment(
             @PathVariable Long commentId,
             @AuthenticationPrincipal BoardPrincipal boardPrincipal,
             Long articleId
@@ -41,5 +39,6 @@ public class ArticleCommentController {
 
         return "redirect:/articles/" + articleId;
     }
+
 }
 

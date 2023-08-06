@@ -32,8 +32,8 @@ public class SecurityConfig {
                 )
                 .formLogin().and()
                 .logout()
-                        .logoutSuccessUrl("/")
-                        .and()
+                .logoutSuccessUrl("/")
+                .and()
                 .build();
     }
 
@@ -50,4 +50,5 @@ public class SecurityConfig {
     public PasswordEncoder passwordEncoder() {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
+
 }
