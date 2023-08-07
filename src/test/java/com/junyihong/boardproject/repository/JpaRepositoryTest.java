@@ -1,6 +1,5 @@
 package com.junyihong.boardproject.repository;
 
-import com.junyihong.boardproject.config.JpaConfig;
 import com.junyihong.boardproject.domain.Article;
 import com.junyihong.boardproject.domain.UserAccount;
 import org.junit.jupiter.api.DisplayName;

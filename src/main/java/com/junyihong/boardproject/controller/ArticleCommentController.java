@@ -1,6 +1,5 @@
 package com.junyihong.boardproject.controller;
 
-import com.junyihong.boardproject.dto.UserAccountDto;
 import com.junyihong.boardproject.dto.request.ArticleCommentRequest;
 import com.junyihong.boardproject.dto.security.BoardPrincipal;
 import com.junyihong.boardproject.service.ArticleCommentService;
@@ -18,7 +17,7 @@ public class ArticleCommentController {
 
     private final ArticleCommentService articleCommentService;
 
-    @PostMapping ("/new")
+    @PostMapping("/new")
     public String postNewArticleComment(
             @AuthenticationPrincipal BoardPrincipal boardPrincipal,
             ArticleCommentRequest articleCommentRequest
@@ -29,7 +28,7 @@ public class ArticleCommentController {
         return "redirect:/articles/" + articleCommentRequest.articleId();
     }
 
-    @PostMapping ("/{commentId}/delete")
+    @PostMapping("/{commentId}/delete")
     public String deleteArticleComment(
             @PathVariable Long commentId,
             @AuthenticationPrincipal BoardPrincipal boardPrincipal,

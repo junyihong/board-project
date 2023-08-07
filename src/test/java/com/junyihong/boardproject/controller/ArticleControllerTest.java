@@ -1,6 +1,5 @@
 package com.junyihong.boardproject.controller;
 
-import com.junyihong.boardproject.config.SecurityConfig;
 import com.junyihong.boardproject.config.TestSecurityConfig;
 import com.junyihong.boardproject.domain.constant.FormStatus;
 import com.junyihong.boardproject.domain.constant.SearchType;
