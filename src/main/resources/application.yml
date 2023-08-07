@@ -64,10 +64,11 @@ spring:
     activate:
       on-profile: heroku
   datasource:
-    url: ${CLEARDB_DATABASE_URL}
+    url: ${JAWSDB_URL}
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
   sql:
     init:
       mode: always

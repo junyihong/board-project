@@ -5,7 +5,7 @@
 
 * Intellij IDEA Ultimate 2022.1.1 ~ 2022.1.3
 * Java 17
-* Gradle 8.1.1
+* Gradle 8.0
 * Spring Boot 2.7.14
 
 ## 기술 세부 스택
