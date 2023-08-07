@@ -1,6 +1,5 @@
 package com.junyihong.boardproject.controller;
 
-import com.junyihong.boardproject.config.SecurityConfig;
 import com.junyihong.boardproject.config.TestSecurityConfig;
 import com.junyihong.boardproject.dto.ArticleCommentDto;
 import com.junyihong.boardproject.dto.request.ArticleCommentRequest;
@@ -37,7 +36,7 @@ class ArticleCommentControllerTest {
 
     @MockBean private ArticleCommentService articleCommentService;
 
-    public ArticleCommentControllerTest(
+    ArticleCommentControllerTest(
             @Autowired MockMvc mvc,
             @Autowired FormDataEncoder formDataEncoder
     ) {
@@ -56,11 +55,11 @@ class ArticleCommentControllerTest {
 
         // When & Then
         mvc.perform(
-                        post("/comments/new")
-                                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                                .content(formDataEncoder.encode(request))
-                                .with(csrf())
-                )
+                post("/comments/new")
+                        .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                        .content(formDataEncoder.encode(request))
+                        .with(csrf())
+        )
                 .andExpect(status().is3xxRedirection())
                 .andExpect(view().name("redirect:/articles/" + articleId))
                 .andExpect(redirectedUrl("/articles/" + articleId));
@@ -79,11 +78,11 @@ class ArticleCommentControllerTest {
 
         // When & Then
         mvc.perform(
-                        post("/comments/" + articleCommentId + "/delete")
-                                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                                .content(formDataEncoder.encode(Map.of("articleId", articleId)))
-                                .with(csrf())
-                )
+                post("/comments/" + articleCommentId + "/delete")
+                        .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                        .content(formDataEncoder.encode(Map.of("articleId", articleId)))
+                        .with(csrf())
+        )
                 .andExpect(status().is3xxRedirection())
                 .andExpect(view().name("redirect:/articles/" + articleId))
                 .andExpect(redirectedUrl("/articles/" + articleId));
