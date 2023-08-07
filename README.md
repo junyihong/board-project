@@ -31,6 +31,10 @@ Spring Boot
 * Bootstrap 5.2.0-Beta1
 * Heroku
 
+## 데모 페이지
+*  https://board-project-junyihong-8f72664a6221.herokuapp.com/
+
+
 ## Reference
 
 * 유즈케이스 다이어그램: (https://raw.githubusercontent.com/junyihong/board-project/main/document/use-case.svg)
