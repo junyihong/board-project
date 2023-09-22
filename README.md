@@ -52,9 +52,13 @@ Spring Boot
 * Heroku
 
 
-
-
 ## Reference
 
 * 유즈케이스 다이어그램: (https://raw.githubusercontent.com/junyihong/board-project/main/document/use-case.svg)
 * ER 다이어그램 : (https://raw.githubusercontent.com/junyihong/board-project/main/document/board-project-erd.svg)
+
+## Img
+![](https://github.com/junyihong/board-project/blob/main/document/projects_backlog_board.jpg?raw=true)
+![](https://github.com/junyihong/board-project/blob/main/document/archive_items.jpg?raw=true)
+![](https://github.com/junyihong/board-project/blob/main/document/board1.jpg?raw=true)
+![](https://github.com/junyihong/board-project/blob/main/document/board2.jpg?raw=true)
