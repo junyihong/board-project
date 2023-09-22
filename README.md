@@ -1,5 +1,25 @@
 # 게시판 서비스
-[![GitKraken shield](https://img.shields.io/badge/GitKraken-Legendary%20Git%20Tools-teal?style=plastic&logo=gitkraken)](http://gitkraken.link/junyihong)
+<img src="https://img.shields.io/badge/Java-007396?style=plastic&logo=OpenJDK&logoColor=white">![](https://img.shields.io/badge/Spring-6DB33F?style=plastic&logo=spring&logoColor=white)![](https://img.shields.io/badge/SpringBoot-6DB33F?style=plastic&logo=springboot&logoColor=white)![](https://img.shields.io/badge/Thymeleaf-005F0F?style=plastic&logo=Thymeleaf&logoColor=white)
+
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white"><img src="https://img.shields.io/badge/CSS3-1572B6?style=plastic&logo=css3&logoColor=white"><img src="https://img.shields.io/badge/Bootstrap-7952B3?style=plastic&logo=bootstrap&logoColor=white">
+
+
+
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=plastic&logo=mysql&logoColor=white"><img src="https://img.shields.io/badge/IntelliJ IDEA-000000?style=plastic&logo=IntelliJ IDEA&logoColor=white"/>
+
+
+![](https://img.shields.io/badge/GitHub-181717?style=plastic&logo=github&logoColor=white)
+[![GitKraken shield](https://img.shields.io/badge/GitKraken-GUI%20Git%20Tools-teal?style=plastic&logo=gitkraken)](http://gitkraken.link/junyihong)
+
+
+## 데모 페이지
+*  https://board-project-junyihong-8f72664a6221.herokuapp.com/
+
+
+## 로그인 (임시 설정)
+*  ID : junyihong
+*  PW : asdf1234
+
 
 ## 개발 환경
 
@@ -31,8 +51,7 @@ Spring Boot
 * Bootstrap 5.2.0-Beta1
 * Heroku
 
-## 데모 페이지
-*  https://board-project-junyihong-8f72664a6221.herokuapp.com/
+
 
 
 ## Reference
