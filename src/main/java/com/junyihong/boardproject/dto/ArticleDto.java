@@ -3,7 +3,6 @@ package com.junyihong.boardproject.dto;
 import com.junyihong.boardproject.domain.Article;
 import com.junyihong.boardproject.domain.UserAccount;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public record ArticleDto(
