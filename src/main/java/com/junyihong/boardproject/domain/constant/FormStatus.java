@@ -3,7 +3,7 @@ package com.junyihong.boardproject.domain.constant;
 import lombok.Getter;
 
 public enum FormStatus {
-    CREATE("저장", false),
+    CREATE("작성", false),
     UPDATE("수정", true);
 
     @Getter private final String description;
