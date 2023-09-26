@@ -1,0 +1,60 @@
+/*---------------Articles--------------------*/
+@import "articles/article-content.css";
+@import "articles/table-header.css";
+@import "articles/form.css";
+
+
+
+
+
+
+/*---------------Components--------------------*/
+@import "search-bar.css";
+
+
+
+
+
+
+/*------------------Include---------------------*/
+@import "header.css";
+@import "footer.css";
+
+
+
+
+
+
+/*------------------Pages-----------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------Font------------------------*/
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+/*-----------------Root--------------------------*/
+* {
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #222B31;
+}

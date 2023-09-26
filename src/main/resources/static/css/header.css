@@ -1,0 +1,111 @@
+.navbar-inverse {
+    background: #222B31 !important;
+    border-bottom: 4px solid #ff5e14 !important;
+}
+
+.navbar-brand {
+    font: 20px Lato !important;
+    text-transform: uppercase;
+    color: #FFF !important;
+    letter-spacing: 2px;
+    margin-top: 6px;
+}
+
+.nav {
+    margin-bottom: 0px;
+}
+.nav a {
+    font: 500 14px Lato;
+    letter-spacing: 2px;
+    padding: 16px !important;
+    color: #a3bfc6 !important;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1000;
+}
+.nav a:hover {
+    color: #FFF !important;
+}
+.nav li {
+    position: relative;
+}
+
+.navbar-inverse .navbar-toggle {
+    border: none;
+}
+
+.navbar-collapse {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+    background: transparent !important;
+}
+
+.navbar-inverse .navbar-toggle:focus {
+    background: transparent !important;
+}
+
+.navbar-inverse .navbar-toggle:active {
+    background: transparent !important;
+}
+
+.icon-bar {
+    background: #a3bfc6 !important;
+}
+.navbar-nav {
+    flex-direction: row;
+}
+.hover {
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ff5e14 !important;
+    z-index: 0;
+    opacity: 0;
+}
+
+@media (max-width: 767px) {
+    .nav {
+        padding-bottom: 20px;
+    }
+    .nav a {
+        padding: 12px !important;
+    }
+}
+@media (max-width: 480px) {
+    .nav {
+        padding-bottom: 20px;
+    }
+}
+/*-------------*/
+.button {
+    display: inline-block;
+    background: #222b31;
+    color: white;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    -webkit-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+}
+.button:hover {
+    box-shadow: 0px 0px 10px 3px #ff5e14;
+    -webkit-transform: translate(0px, -3px) scale(1.05);
+    transform: translate(0px, -3px) scale(1.05);
+    background: #ff5e14;
+    color: #222b31;
+}
+.text-white{
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+.header-logo{
+    max-width: 40px;
+    margin-right: 15px;
+}
