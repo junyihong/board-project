@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<header class="p-3 bg-dark text-white">
+<header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a id="home" href="#" class="nav-link px-2 text-secondary">Home</a></li>
-                <li><a id="hashtag" href="#" class="nav-link px-2 text-secondary">Hashtags</a></li>
+        <a class="navbar-brand" href="/"><img src="https://junyihong.github.io/assets/logo.ico/android-chrome-192x192.png" class="img-fluid header-logo" alt="logo"> JUNYIHONG'S BOARD</a>
+            <ul class="nav navbar-nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a id="home" href="/" class="nav-link px-2 text-secondary">Home</a><span class="hover"></span></li>
+                <li><a id="hashtag" href="#" class="nav-link px-2 text-secondary">Hashtags</a><span class="hover"></span></li>
             </ul>
 
             <div class="text-end">
                 <span id="username" class="text-white me-2">username</span>
-                <a role="button" id="login" class="btn btn-outline-light me-2">Login</a>
-                <a role="button" id="logout" class="btn btn-outline-light me-2">Logout</a>
+                <span id="usergreeting" class="text-white me-2">님, 안녕하세요!</span>
+                <span id="greeting" class="text-white me-2">반갑습니다! 로그인 후 이용해 주세요.</span>
+                <a role="button" id="login" class="button"><i class="fa-solid fa-circle-user fa-lg"></i></a>
+                <a role="button" id="logout" class="button"><i class="fa-solid fa-right-from-bracket fa-lg"></i></a>
             </div>
-        </div>
     </div>
 </header>
 </body>
