@@ -3,39 +3,15 @@
 @import "articles/table-header.css";
 @import "articles/form.css";
 
-
-
-
-
-
 /*---------------Components--------------------*/
 @import "search-bar.css";
-
-
-
-
-
 
 /*------------------Include---------------------*/
 @import "header.css";
 @import "footer.css";
 
-
-
-
-
-
 /*------------------Pages-----------------------*/
-
-
-
-
-
-
-
-
-
-
+@import "login.css";
 
 
 /*-----------------Font------------------------*/
@@ -47,14 +23,11 @@
 }
 
 
-
-
-
 /*-----------------Root--------------------------*/
 * {
     font-family: 'Pretendard-Regular', sans-serif;
 }
+
 a {
     text-decoration: none;
-    color: #222B31;
 }
