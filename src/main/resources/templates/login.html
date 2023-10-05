@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="/css/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<header id="header">
+    헤더 삽입부
+    <hr>
+</header>
+<div class="login">
+    <div class="login__content">
+        <div class="login__img">
+            <img src="https://raw.githubusercontent.com/bedimcode/responsive-login-signin-signup/b3c2eaa19d76624092bd606d28fbd616d539de92/assets/img/img-login.svg"
+                 alt="">
+        </div>
+
+        <div class="login__forms">
+            <form th:action="@{/login}" class="login__registre" id="login-in" method="post">
+                <h1 class="login__title">로그인 하기</h1>
+
+                <div class="login__box">
+                    <i class='bx bx-user login__icon'></i>
+                    <input type="text" placeholder="ID" name="username" class="login__input" autocomplete="on">
+                </div>
+
+                <div class="login__box">
+                    <i class='bx bx-lock-alt login__icon'></i>
+                    <input type="password" placeholder="Password" name="password" class="login__input"
+                           autocomplete="on">
+                </div>
+
+                <a href="#" class="login__forgot">비밀번호를 잊으셨나요?</a>
+
+                <button type="submit" class="login__button">로그인</button>
+
+                <div>
+                    <span class="login__account">계정이 없으신가요?</span>
+                    <a th:href="@{/signup}" class="login__signin" id="sign-up">회원가입 하기</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <hr>
+    푸터 삽입부
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+<script src="/js/header.js"></script>
+<script src="https://kit.fontawesome.com/0f1871673a.js" crossorigin="anonymous"></script>
+</body>
+</html>

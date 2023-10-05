@@ -1,33 +1,117 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>회원 가입</title>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="/css/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-<header>
-  header 템플릿 삽입부
-  <hr>
+<header id="header">
+    헤더 삽입부
+    <hr>
 </header>
+<script th:if="${not #strings.isEmpty(messageFromBackend)}">
+    alert("[[${messageFromBackend}]]");
+    window.location.href = "/login";
+</script>
+<div class="login">
+    <div class="login__content">
+        <div class="login__img">
+            <img src="https://raw.githubusercontent.com/bedimcode/responsive-login-signin-signup/b3c2eaa19d76624092bd606d28fbd616d539de92/assets/img/img-login.svg"
+                 alt="">
+        </div>
+        <div class="login__forms">
+            <form th:object="${userAccountRequestDto}" class="login__create" id="login-up" method="post" th:action="@{/signup}" onsubmit="return redirectToLoginPage()">
 
-<form>
-  <label for="userId">ID</label>
-  <input id="userId" type="text" required>
-  <label for="password">Password</label>
-  <input id="password" type="password" required>
-  <label for="email">Email</label>
-  <input id="email" type="email" placeholder="you@example.com">
-  <label for="nickname">Nickname</label>
-  <input id="nickname" type="text">
-  <label for="memo">메모</label>
-  <textarea id="memo" rows="3"></textarea>
-  <button type="submit">가입</button>
-</form>
+                <h1 class="login__title">회원 가입</h1>
 
-<footer>
-  <hr>
-  footer 템플릿 삽입부
+                <!-- 아이디 입력란 -->
+                <div class="login__box">
+                    <i class='bx bx-user login__icon'></i>
+                    <label>
+                        <input th:field="*{userId}" type="text" placeholder="ID" name="userId" class="login__input"
+                               autocomplete="off" required>
+                    </label>
+                </div>
+                <!-- 아이디 입력 에러 메시지 -->
+                <p class="fields-errors" th:if="${#fields.hasErrors('userId')}"><span th:errors="*{userId}"></span></p>
+
+                <!-- 비밀번호 입력란 -->
+                <div class="login__box">
+                    <i class='bx bx-lock-alt login__icon'></i>
+                    <label>
+                        <input th:field="*{userPassword}" type="password" placeholder="Password" name="userPassword"
+                               class="login__input"
+                               autocomplete="off" required>
+                    </label>
+                </div>
+                <!-- 비밀번호 입력 에러 메시지 -->
+                <p class="fields-errors" th:if="${#fields.hasErrors('userPassword')}"><span th:errors="*{userPassword}"></span></p>
+
+                <!-- 이메일 입력란 -->
+                <div class="login__box">
+                    <i class='bx bx-at login__icon'></i>
+                    <label>
+                        <input th:field="*{email}" type="text" placeholder="Email" name="email" class="login__input"
+                               autocomplete="off" required>
+                    </label>
+                </div>
+                <!-- 이메일 입력 에러 메시지 -->
+                <p class="fields-errors" th:if="${#fields.hasErrors('email')}"><span th:errors="*{email}"></span></p>
+
+                <!-- 별명 입력란 -->
+                <div class="login__box">
+                    <i class='bx bx-text login__icon'></i>
+                    <label>
+                        <input th:field="*{nickname}" type="text" placeholder="Nickname" name="nickname"
+                               class="login__input" autocomplete="off" required>
+                    </label>
+                </div>
+                <!-- 별명 입력 에러 메시지 -->
+                <p class="fields-errors" th:if="${#fields.hasErrors('nickname')}"><span th:errors="*{nickname}"></span></p>
+
+                <!-- 메모 입력란 -->
+                <div class="login__box">
+                    <i class='bx bx-edit login__icon'></i>
+                    <label>
+                        <input th:field="*{memo}" type="text" placeholder="Memo" name="memo" class="login__input"
+                               autocomplete="off">
+                    </label>
+                </div>
+                <!-- 메모 입력 에러 메시지 -->
+                <p class="fields-errors" th:if="${#fields.hasErrors('memo')}"><span th:errors="*{memo}"></span></p>
+                <!-- 회원 가입 버튼 -->
+                <button type="submit" class="login__button">회원 가입</button>
+
+                <div class="login__social">
+                    <a href="#" class="login__social-icon kakaotalk">
+                        <img class="kakaotalk__login" src="https://developers.kakao.com/tool/resource/static/img/button/kakaotalksharing/kakaotalk_sharing_btn_medium.png" style="display: inline-block"/>
+                        <p class="login__social-p">카카오톡으로 로그인</p>
+                    </a>
+                    <!--                    <a href="#" class="login__social-icon"><i class='bx bxl-facebook'></i></a>-->
+                    <!--                    <a href="#" class="login__social-icon"><i class='bx bxl-twitter'></i></a>-->
+                    <!--                    <a href="#" class="login__social-icon"><i class='bx bxl-google'></i></a>-->
+                </div>
+
+                <div style="margin-top: 10px;">
+                    <span class="login__account">이미 계정이 있으신가요?</span>
+                    <a href="/login" class="login__signup" id="sign-in">로그인</a>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <hr>
+    푸터 삽입부
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="/js/header.js"></script>
+<script src="https://kit.fontawesome.com/0f1871673a.js" crossorigin="anonymous"></script>
 </body>
 </html>

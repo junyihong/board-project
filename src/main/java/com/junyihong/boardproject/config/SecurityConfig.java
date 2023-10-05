@@ -26,14 +26,28 @@ public class SecurityConfig {
                                 HttpMethod.GET,
                                 "/",
                                 "/articles",
-                                "/articles/search-hashtag"
-                        ).permitAll()
+                                "/articles/search-hashtag",
+                                "/signup",
+                                "/login"
+                        )
+                        .permitAll()
+                        .mvcMatchers(
+                                HttpMethod.POST,
+                                "/signup",
+                                "/login"
+                        )
+                        .permitAll()
                         .anyRequest().authenticated()
                 )
-                .formLogin().and()
+                .formLogin(login -> login
+                        .loginPage("/login") // 커스텀 로그인 페이지 경로
+                        .defaultSuccessUrl("/")
+                )
                 .logout()
-                .logoutSuccessUrl("/")
+                .logoutSuccessUrl("/login")
+                .invalidateHttpSession(true)
                 .and()
+                .csrf().disable() //csrf 비활성화
                 .build();
     }
 
