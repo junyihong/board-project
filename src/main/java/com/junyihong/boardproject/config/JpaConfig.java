@@ -22,8 +22,12 @@ public class JpaConfig {
                 .map(SecurityContext::getAuthentication)
                 .filter(Authentication::isAuthenticated)
                 .map(Authentication::getPrincipal)
-                .map(BoardPrincipal.class::cast)
-                .map(BoardPrincipal::getUsername);
+                .map(principal -> {
+                    if (principal instanceof BoardPrincipal) {
+                        return ((BoardPrincipal) principal).getUsername();
+                    }
 
+                    return "등록되지 않은 사용자";
+                });
     }
 }
