@@ -318,9 +318,7 @@ class ArticleServiceTest {
                 "junyihong",
                 "This is memo",
                 LocalDateTime.now(),
-                "junyihong",
-                LocalDateTime.now(),
-                "junyihong"
+                LocalDateTime.now()
         );
     }
 

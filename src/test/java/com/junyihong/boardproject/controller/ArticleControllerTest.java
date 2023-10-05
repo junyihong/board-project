@@ -377,9 +377,7 @@ class ArticleControllerTest {
                 "junyihong",
                 "memo",
                 LocalDateTime.now(),
-                "junyihong",
-                LocalDateTime.now(),
-                "junyihong"
+                LocalDateTime.now()
         );
     }
 
