@@ -39,12 +39,16 @@
                 <a href="#" class="login__forgot">비밀번호를 잊으셨나요?</a>
 
                 <button type="submit" class="login__button">로그인</button>
-
+                <a href="/oauth2/authorization/kakao" class="login__kakao" id="kakao-sign-in" >
+                    <img alt="카카오톡으로 로그인" class="kakaotalk__login" src="/images/kakaotalk_login.png"/>
+                </a>
                 <div>
                     <span class="login__account">계정이 없으신가요?</span>
                     <a th:href="@{/signup}" class="login__signin" id="sign-up">회원가입 하기</a>
                 </div>
             </form>
+
+
         </div>
     </div>
 </div>

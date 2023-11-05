@@ -37,7 +37,6 @@ h1 {
 
 .login img {
     max-width: 100%;
-    height: auto;
     display: block;
 }
 
@@ -79,6 +78,7 @@ h1 {
     box-shadow: 0 8px 20px rgba(35, 0, 77, .2);
     animation-duration: .4s;
     animation-name: animate-login;
+    min-height: 470px;
 }
 
 .login__create {
@@ -184,16 +184,6 @@ h1 {
     color: var(--first-color);
     cursor: pointer;
 }
-
-.login__social {
-    margin-top: 1rem;
-}
-
-.login__social-icon {
-    font-size: 1.5rem;
-    color: var(--first-color-dark);
-}
-
 /*Show login*/
 .block {
     display: block;
@@ -258,32 +248,17 @@ h1 {
     font-size: .875rem;
 }
 
-
-.kakaotalk {
-    display: flex;
-    align-items: center;
-    padding: 2px;
-    height: 64px;
-    border-radius: .5rem;
-    background: #ffeb00;
-    color: #1d1d1d;
-    font-size: 20px;
-    font-weight: 700;
-    font-family: 'Pretendard-Regular', sans-serif;
-    transition: 0.3s;
-}
-.kakaotalk:hover{
-    background: #dccb00;
-    color: #1d1d1d;
+.login__kakao{
+    display: block;
+    transition: .3s;
+    width: 100%;
+    border: none;
+    overflow: hidden;
+    max-height: 66px;
+    margin-bottom: 1rem;
 }
 .kakaotalk__login {
-    width: 40px;
-    height: 40px;
-    margin-left: 1.8rem;
-    margin-right: 1.3rem;
-    display: inline-block;
-    transition: 0.3s;
+    border-radius: .5rem;
 }
-.login__social-p {
-    margin: 0;
-}
+
+

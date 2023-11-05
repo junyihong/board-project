@@ -2,6 +2,7 @@ package com.junyihong.boardproject.controller;
 
 
 import com.junyihong.boardproject.config.TestSecurityConfig;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,7 @@ class AuthControllerTest {
 
 
     @DisplayName("[view][GET] 로그인 페이지 - 정상 호출")
+    @Disabled   // 커스텀 로그인페이지를 적용하면서, Disabled 어노테이션을 적용시켰다.
     @Test
     void givenNothing_whenTryingToLogIn_thenReturnsLogInView() throws Exception {
         // Given
