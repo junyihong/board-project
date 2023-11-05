@@ -13,6 +13,7 @@ import org.springframework.validation.FieldError;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Transactional
@@ -51,5 +52,17 @@ public class UserAccountService {
                                 userAccountRequestDto.getNickname(),
                                 userAccountRequestDto.getMemo()
                                 ));
+    }
+
+    @Transactional(readOnly = true)
+    public Optional<UserAccountDto> searchUser(String username) {
+        return userAccountRepository.findById(username)
+                .map(UserAccountDto::from);
+    }
+
+    public UserAccountDto saveUser(String userId, String userPassword, String email, String nickname, String memo) {
+        return UserAccountDto.from(
+                userAccountRepository.save(UserAccount.of(userId, userPassword, email, nickname, memo, userId))
+        );
     }
 }
