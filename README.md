@@ -10,8 +10,8 @@
 [![GitKraken shield](https://img.shields.io/badge/GitKraken-GUI%20Git%20Tools-teal?style=plastic&logo=gitkraken)](http://gitkraken.link/junyihong)
 
 ## 데모 페이지
-
-- https://board-project-junyihong-8f72664a6221.herokuapp.com/
+- 현재 중단
+~~ - https://board-project-junyihong-8f72664a6221.herokuapp.com/ ~~
 
 ## ~~로그인 (임시 설정)~~
 
